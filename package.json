@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "1": "nodemon --exec babel-node code/1-two-numbers-in-list.js",
-    "1-test": "nodemon --exec babel-node code/1-test.js"
+    "1-test": "nodemon --exec babel-node code/1-test.js",
+    "2": "nodemon --exec babel-node code/2-product-of-nums.js"
   },
   "keywords": [],
   "author": "",
