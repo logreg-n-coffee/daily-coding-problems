@@ -4,13 +4,13 @@
  * input [3, 2, 1] - output [2, 3, 6]
  */
 
-const productOfNums = nums => {
-    const result = [];
-    const product = nums.reduce((prev, curr) => prev * curr, 1);
-    nums.forEach((num) => {
-        result.push(product / num);
-    });
-    return result;
+const productExceptSelf = (nums) => {
+  const result = [];
+  const product = nums.reduce((prev, curr) => prev * curr, 1);
+  nums.forEach((num) => {
+    result.push(product / num);
+  });
+  return result;
 };
 
-console.log(productOfNums([1, 2, 3, 4, 5]));
+console.log(productExceptSelf([1, 2, 3, 4, 5]));
