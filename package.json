@@ -1,0 +1,26 @@
+{
+  "name": "daily-coding-problems",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "1": "nodemon --exec babel-node code/1-two-numbers-in-list.js",
+    "1-test": "nodemon --exec babel-node code/1-test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/register": "^7.18.6",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "prompt-sync": "^4.2.0"
+  }
+}
