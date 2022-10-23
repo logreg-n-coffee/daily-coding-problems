@@ -6,7 +6,8 @@
   "scripts": {
     "1": "nodemon --exec babel-node code/1-two-numbers-in-list.js",
     "1-test": "nodemon --exec babel-node code/1-test.js",
-    "2": "nodemon --exec babel-node code/2-product-except-self.js"
+    "2": "nodemon --exec babel-node code/2-product-except-self.js",
+    "3": "nodemon --exec babel-node code/3-serialize-node.js"
   },
   "keywords": [],
   "author": "",
