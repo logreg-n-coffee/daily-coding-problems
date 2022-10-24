@@ -7,7 +7,9 @@
     "1": "nodemon --exec babel-node code/1-two-numbers-in-list.js",
     "1-test": "nodemon --exec babel-node code/1-test.js",
     "2": "nodemon --exec babel-node code/2-product-except-self.js",
-    "3": "nodemon --exec babel-node code/3-serialize-node.js"
+    "3": "nodemon --exec babel-node code/3-serialize-node.js",
+    "4": "nodemon --exec babel-node code/4-lowest-positive-integer-that-does-not-exist.js",
+    "5": "nodemon --exec babel-node code/5-cons-car-cdr.js"
   },
   "keywords": [],
   "author": "",
