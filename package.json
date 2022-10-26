@@ -9,7 +9,8 @@
     "2": "nodemon --exec babel-node code/2-product-except-self.js",
     "3": "nodemon --exec babel-node code/3-serialize-node.js",
     "4": "nodemon --exec babel-node code/4-lowest-positive-integer-that-does-not-exist.js",
-    "5": "nodemon --exec babel-node code/5-cons-car-cdr.js"
+    "5": "nodemon --exec babel-node code/5-cons-car-cdr.js",
+    "6": "nodemon --exec babel-node code/6-xor-linked-list.js"
   },
   "keywords": [],
   "author": "",
