@@ -18,56 +18,6 @@
  * link(D) = addr(C) ^ NULL        // bitwise XOR of the address of node A with NULL
  */
 
-/*
-var node = function(data, xor){
-  this.data = data;
-  this.xor = xor;
-}
-
-var pointerFactory = function(){
-    var pointers = {};
-    var pointerCount = 0;
-    this.get_pointer = function(node){
-        if (pointers.hasOwnProperty(node)) return pointers[node];
-        pointerCount++;
-        pointers[node]=pointerCount;
-        pointers[pointerCount]=node;
-        return pointerCount;
-    }
-    this.dereference_pointer = function(pointer){
-        return (pointers.hasOwnProperty(pointer)) ? pointers[pointer] : null;
-    }
-}
-
-var myNode = new node('my data', 0);
-var pf = new pointerFactory();
-var p = pf.get_pointer(myNode);
-console.log(pf.dereference_pointer(p).data); // my data
-console.log(pf.dereference_pointer(2)); //null
-console.log(0 ^ p);  // 1
-console.log(p ^ p);  // 0
-*/
-
-/**
- * An XOR linked list is a more memory efficient doubly linked list.
- * Instead of each node holding next and prev fields, it holds a field named both,
- * which is an XOR of the next node and the previous node.
- *
- * Implement an XOR linked list; it has an add(element) which adds the element to the end,
- * and a get(index) which returns the node at index.
- * If using a language that has no pointers (such as Python),
- * you can assume you have access to get_pointer and dereference_pointer functions that converts between nodes and memory addresses.
- *
- * https://en.wikipedia.org/wiki/XOR_linked_list
- *
- *  ...  A        B         C         D         E  ...
-          ⇌      A⊕C   ⇌   B⊕D   ⇌   C⊕E   ⇌
- * link(A) = NULL ^ addr(B)        // bitwise XOR of NULL with address of node B
- * link(B) = addr(A) ^ addr(C)     // bitwise XOR between the address of node A and C
- * link(C) = addr(B) ^ addr(D)     // bitwise XOR between the address of node B and D
- * link(D) = addr(C) ^ NULL        // bitwise XOR of the address of node A with NULL
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -109,29 +59,6 @@ void traverse(struct Node *head)
     printf("NULL\n");
 }
 
-// TODO: function to append a node to the end of the list - traverse the list and append
-void append(struct Node *head, int data)
-{
-    struct Node *curr = head;
-    struct Node *prev = NULL;
-    struct Node *next;
-
-    // check if the list is empty
-    while (curr != NULL)
-    {
-        next = XOR(prev, curr->link);
-
-        prev = curr;
-        curr = next;
-    }
-
-    // get the pointer to the next node
-    struct Node *newNode = (struct Node *)malloc(sizeof(newNode));
-    newNode->data = data;
-
-    // link the newNode to its previous node (curr)
-    curr->link = newNode;
-}
 
 // get function returns the node at the given index, return type struct Node
 int get(int index, struct Node *head)
