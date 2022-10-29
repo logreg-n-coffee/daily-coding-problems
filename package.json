@@ -12,7 +12,8 @@
     "5": "nodemon --exec babel-node code/5-cons-car-cdr.js",
     "6": "nodemon --exec babel-node code/6-xor-linked-list.js",
     "7": "nodemon --exec babel-node code/7-decode-ways.js",
-    "8": "nodemon --exec babel-node code/8-unival-sub-trees.js"
+    "8": "nodemon --exec babel-node code/8-unival-sub-trees.js",
+    "9": "nodemon --exec babel-node code/9-non-adjacent-max-sum.js"
   },
   "keywords": [],
   "author": "",
