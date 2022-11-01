@@ -10,8 +10,9 @@
 // 2, 2
 // What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? 
 // For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
+// answer: f(n) = f(n - 1) + f(n - 3) + f(n - 5)
 
-// fibonacci numbers - dynamic planning
+// fibonacci numbers - dynamic planning -> f(n) = f(n - 1) + f(n - 2)  // 1 = 1 step, 2 = 2 steps
 
 const climbStairs = (n = 1) => {
     if (n <= 2) {
@@ -29,5 +30,35 @@ const climbStairs = (n = 1) => {
 
 console.log(climbStairs(6));
 // expect 13
-
 // Time: O(n) / Space: O(1)
+
+const climbStairsAlt = (n = 1) => {
+    let a = 1, b = 2;
+    for (const _ of Array(n - 1).keys()) {
+        [a, b] = [b, a + b];
+    }
+    return a;
+};
+console.log(climbStairsAlt(5));
+
+// steps = [x1, x2, ..., xn] 
+// f(n) = f(n - x1) + f(n - x2) + ... + f(n - xn)
+const climbStairsWithCustomizedSteps = (n = 1, steps = [1, 2]) => {
+    const cache = Array(n + 1);
+    if (n === 0) {
+        cache[n] = 1;
+    } else {
+        let total = 0;
+        for (const step of steps) {
+            if (n >= step) {
+                total += climbStairsWithCustomizedSteps(n - step, steps);
+            }
+            cache[n] = total;
+        }
+    }
+    return cache[n];
+
+};
+
+console.log(climbStairsWithCustomizedSteps(6));
+// time: O(n * |steps|) - space: O(n) 
