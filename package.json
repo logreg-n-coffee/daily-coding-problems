@@ -16,7 +16,9 @@
     "9": "nodemon --exec babel-node code/9-non-adjacent-max-sum.js",
     "10": "nodemon --exec babel-node code/10-job-scheduler.js",
     "11": "nodemon --exec babel-node code/11-autocomplete-system.js",
-    "12": "nodemon --exec babel-node code/12-climb-staircases.js"
+    "12": "nodemon --exec babel-node code/12-climb-staircases.js",
+    "13": "nodemon --exec babel-node code/13-longest-substring-with-k-distinct-characters.js",
+    "14": "nodemon --exec babel-node code/14-monte-carlo-pi.js"
   },
   "keywords": [],
   "author": "",
