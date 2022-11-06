@@ -56,4 +56,48 @@ log.print();
 
 
 // O(1) constant time solution - build a circular buffer
+class LogWithCircularBuffer {
+    // declare private field
+    #log;
+    #cur;
 
+    constructor(n) {
+        this.n = n;
+        this.#log = [];
+        this.#cur = 0;
+    }
+
+    record(orderId) {
+        if (this.#log.length === this.n) {
+            this.#log[this.#cur] = orderId;
+        } else {
+            this.#log.push(orderId);
+        }
+        this.#cur = (this.#cur + 1) % this.n;
+    }
+
+    getLast(i) {
+        return this.#log[this.#cur - i];
+    }
+
+    print() {
+        this.#log.forEach((element, index) =>
+            console.log('element, index', element, index)
+        );
+    }
+}
+
+// driver code
+console.log('---O(1)---');
+const logWithCircularBuffer = new LogWithCircularBuffer(5);
+for (let i = 0; i < 6; i++) {
+    log.record(i);
+}
+logWithCircularBuffer.record(100);
+logWithCircularBuffer.record(200);
+logWithCircularBuffer.record(300);
+logWithCircularBuffer.record(400);
+logWithCircularBuffer.record(500);
+logWithCircularBuffer.record(600);
+console.log(logWithCircularBuffer.getLast(1));
+logWithCircularBuffer.print();
