@@ -19,7 +19,8 @@
     "12": "nodemon --exec babel-node code/12-climb-staircases.js",
     "13": "nodemon --exec babel-node code/13-longest-substring-with-k-distinct-characters.js",
     "14": "nodemon --exec babel-node code/14-monte-carlo-pi.js",
-    "15": "nodemon --exec babel-node code/15-random-element-in-a-stream.js"
+    "15": "nodemon --exec babel-node code/15-random-element-in-a-stream.js",
+    "16": "nodemon --exec babel-node code/16-record-the-last-n-order-ids"
   },
   "keywords": [],
   "author": "",
