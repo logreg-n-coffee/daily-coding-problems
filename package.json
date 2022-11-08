@@ -21,7 +21,8 @@
     "14": "nodemon --exec babel-node code/14-monte-carlo-pi.js",
     "15": "nodemon --exec babel-node code/15-random-element-in-a-stream.js",
     "16": "nodemon --exec babel-node code/16-record-the-last-n-order-ids",
-    "17": "nodemon --exec babel-node code/17-length-of-the-longest-absolute-path.js"
+    "17": "nodemon --exec babel-node code/17-length-of-the-longest-absolute-path.js",
+    "18": "nodemon --exec babel-node code/18-sliding-window-maximum.js"
   },
   "keywords": [],
   "author": "",
