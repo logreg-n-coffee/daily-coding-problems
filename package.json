@@ -23,7 +23,9 @@
     "16": "nodemon --exec babel-node code/16-record-the-last-n-order-ids",
     "17": "nodemon --exec babel-node code/17-length-of-the-longest-absolute-path.js",
     "18": "nodemon --exec babel-node code/18-sliding-window-maximum.js",
-    "19": "nodemon --exec babel-node code/19-paint-house.js"
+    "19": "nodemon --exec babel-node code/19-paint-house.js",
+    "20": "nodemon --exec babel-node code/20-find-the-intersecting-node.js",
+    "21": "nodemon --exec babel-node code/21-min-classroom-required.js"
   },
   "keywords": [],
   "author": "",
