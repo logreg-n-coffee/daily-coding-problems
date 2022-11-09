@@ -34,7 +34,7 @@
 /**
  * There are a row of n houses, each house can be painted with one of the k colors.
  * Return the minimum cost to paint all houses.
- * @param {Array[]} costs
+ * @param {number[][]} costs
  * @return {number} min
  */
 
