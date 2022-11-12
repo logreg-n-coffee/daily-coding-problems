@@ -50,8 +50,6 @@ If any such path were possible, we would have already explored it.
 // path between a given source cell
 // to a destination cell.
 
-
-
 // To store matrix cell coordinates
 class Point {
     constructor(x, y) {
@@ -71,9 +69,9 @@ class Node {
 // Check whether given cell(row,col)
 // is a valid cell or not
 function isValid(row, col, mat) {
-    const ROW = mat.length;
-    const COL = mat[0].length;
-    return row >= 0 && row < ROW && col >= 0 && col < COL;
+    const m = mat.length;
+    const n = mat[0].length;
+    return row >= 0 && row < m && col >= 0 && col < n;
 }
 
 // These arrays are used to get row and column
@@ -84,18 +82,16 @@ let colNum = [0, -1, 1, 0];
 // Function to find the shortest path between
 // a given source cell to a destination cell.
 function BFS(mat, src, dest) {
-    const r = mat.length;  // 9
-    const c = mat[0].length;  // 10
-    // check source and destination cell
-    // of the matrix have value 1
-    if (mat[src.x][src.y] != 1 || mat[dest.x][dest.y] != 1) return -1;
+    const m = mat.length; // 9
+    const n = mat[0].length; // 10
+    // base case: check source and destination cell
+    // of the matrix have value 0 (unvisitable at the beginning)
+    if (mat[src.x][src.y] !== 0 || mat[dest.x][dest.y] !== 0) return -1;
 
-    let visited = new Array(r)
+    // initialize a matrix of m * n using fill and map method chain
+    let visited = Array(m)
         .fill(false)
-        .map(() => new Array(c).fill(false));
-
-    // let visited = Array(r).fill(Array(c).fill(false));  // this is not really working
-    console.log(visited);
+        .map(() => Array(n).fill(false));
 
     // Mark the source cell as visited
     visited[src.x][src.y] = true;
@@ -110,8 +106,8 @@ function BFS(mat, src, dest) {
     // Do a BFS starting from source cell
     while (q) {
         let curr = q.shift(); // Dequeue the front cell
-        
-        console.log(curr);  // examine the queue
+
+        console.log(curr); // examine the queue
 
         // If we have reached the destination cell,
         // we are done
@@ -125,10 +121,14 @@ function BFS(mat, src, dest) {
 
             // if adjacent cell is valid, has path
             // and not visited yet, enqueue it.
-            if (isValid(row, col, mat) && mat[row][col] == 1 && !visited[row][col]) {
+            if (
+                isValid(row, col, mat) && // is valid
+                mat[row][col] === 0 && // has path
+                !visited[row][col] // not visited yet
+            ) {
                 visited[row][col] = true;
-                let Adjcell = new Node(new Point(row, col), curr.dist + 1);
-                q.push(Adjcell);
+                let adjCell = new Node(new Point(row, col), curr.dist + 1);
+                q.push(adjCell);
             }
         }
     }
@@ -139,15 +139,15 @@ function BFS(mat, src, dest) {
 // Driver code
 function main() {
     let mat = [
-        [1, 0, 1, 1, 1, 1, 0, 1, 1, 1],
-        [1, 0, 1, 0, 1, 1, 1, 0, 1, 1],
-        [1, 1, 1, 0, 1, 1, 0, 1, 0, 1],
-        [0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
-        [1, 1, 1, 0, 1, 1, 1, 0, 1, 0],
-        [1, 0, 1, 1, 1, 1, 0, 1, 0, 0],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-        [1, 0, 1, 1, 1, 1, 0, 1, 1, 1],
-        [1, 1, 0, 0, 0, 0, 1, 0, 0, 1],
+        [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
+        [0, 1, 0, 1, 0, 0, 0, 1, 0, 0],
+        [0, 0, 0, 1, 0, 0, 1, 0, 1, 0],
+        [1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
+        [0, 0, 0, 1, 0, 0, 0, 1, 0, 1],
+        [0, 1, 0, 0, 0, 0, 1, 0, 1, 1],
+        [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+        [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
+        [0, 0, 1, 1, 1, 1, 0, 1, 1, 0],
     ];
 
     let source = new Point(0, 0);
