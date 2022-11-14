@@ -28,7 +28,8 @@
     "21": "nodemon --exec babel-node code/21-min-classroom-required.js",
     "22": "nodemon --exec babel-node code/22-string-reconstruction-using-dictionary.js",
     "23": "nodemon --exec babel-node code/23-shortest-path-in-maze.js",
-    "24": "nodemon --exec babel-node code/24-binary-tree-locking.js"
+    "24": "nodemon --exec babel-node code/24-binary-tree-locking.js", 
+    "25": "nodemon --exec babel-node code/25-regex-matching.js"
   },
   "keywords": [],
   "author": "",
