@@ -29,7 +29,8 @@
     "22": "nodemon --exec babel-node code/22-string-reconstruction-using-dictionary.js",
     "23": "nodemon --exec babel-node code/23-shortest-path-in-maze.js",
     "24": "nodemon --exec babel-node code/24-binary-tree-locking.js", 
-    "25": "nodemon --exec babel-node code/25-regex-matching.js"
+    "25": "nodemon --exec babel-node code/25-regex-matching.js",
+    "26": "nodemon --exec babel-node code/26-remove-kth-last-element-linked-list.js"
   },
   "keywords": [],
   "author": "",
