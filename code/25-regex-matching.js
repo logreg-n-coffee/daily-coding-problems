@@ -77,7 +77,7 @@ console.log(isMatchRec(s1, p1));
 console.log(isMatchRec(s2, p2));
 console.log(isMatchRec(s3, p3));
 
-// Solution 2: Dynamic Programming
+// Solution 2: Dynamic Programming - bottom up approach
 /**
  * Find whether string s matches the regular expression pattern using Dynamic Programming
  * @param {String} s string to match
@@ -110,3 +110,5 @@ console.log(isMatch(s2, p2));
 console.log(isMatch(s3, p3));
 
 // Time/Space complexity: O(T * P) 
+
+// Solution 3: https://www.youtube.com/watch?v=l3hda49XcDE&list=PLrmLmBdmIlpuE5GEMDXWf0PWbBD9Ga1lO
