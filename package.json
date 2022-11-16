@@ -31,7 +31,8 @@
     "24": "nodemon --exec babel-node code/24-binary-tree-locking.js", 
     "25": "nodemon --exec babel-node code/25-regex-matching.js",
     "26": "nodemon --exec babel-node code/26-remove-kth-last-element-linked-list.js",
-    "27": "nodemon --exec babel-node code/27-matching-brackets.js"
+    "27": "nodemon --exec babel-node code/27-matching-brackets.js",
+    "28": "nodemon --exec babel-node code/28-justified-text.js"
   },
   "keywords": [],
   "author": "",
