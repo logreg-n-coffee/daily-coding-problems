@@ -121,3 +121,48 @@ const fullJustify = (words, maxWidth) => {
         return arr;
     }
 };
+
+// example and driver code
+const words1 = ["This", "is", "an", "example", "of", "text", "justification."];
+const maxWidth1 = 16;
+
+const words2 = ['What', 'must', 'be', 'acknowledgment', 'shall', 'be'];
+const maxWidth2 = 16;
+
+const words3 = [
+    'Science',
+    'is',
+    'what',
+    'we',
+    'understand',
+    'well',
+    'enough',
+    'to',
+    'explain',
+    'to',
+    'a',
+    'computer.',
+    'Art',
+    'is',
+    'everything',
+    'else',
+    'we',
+    'do',
+];
+const maxWidth3 = 20;
+
+console.log(fullJustify(words1, maxWidth1));
+console.log(fullJustify(words2, maxWidth2));
+console.log(fullJustify(words3, maxWidth3));
+
+// res:
+// [ 'This    is    an', 'example  of text', 'justification.  ' ]
+// [ 'What   must   be', 'acknowledgment  ', 'shall be        ' ]
+// [
+//   'Science  is  what we',
+//   'understand      well',
+//   'enough to explain to',
+//   'a  computer.  Art is',
+//   'everything  else  we',
+//   'do                  '
+// ]
