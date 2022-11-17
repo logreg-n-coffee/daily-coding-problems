@@ -32,9 +32,7 @@ const fullJustify = (words, maxWidth) => {
     let line = [];
     let lineLength = 0;
 
-    for (let i = 0; i < words.length; i++) {
-        let w = words[i];
-
+    words.forEach(w => {
         if (lineLength === 0 && w.length <= maxWidth) {
             // Note: We add first word assuming no space will be added after it. As we know this is not the case.
             //       The space for first word will be accounted for by our last word in the line &
@@ -74,7 +72,7 @@ const fullJustify = (words, maxWidth) => {
             line.push(w);
             lineLength += w.length;
         }
-    }
+    });
 
     // pad our final line
     line = addMinSpace(line);
@@ -114,7 +112,7 @@ const fullJustify = (words, maxWidth) => {
         while (spaces > 0 && arr.length > 1) {
             for (let i = 0; i < arr.length - 1; i++) {
                 if (spaces <= 0) break;
-                arr[i] = arr[i] + ' ';
+                arr[i] += ' ';
                 spaces--;
             }
         }
