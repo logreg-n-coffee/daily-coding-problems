@@ -33,7 +33,8 @@
     "26": "nodemon --exec babel-node code/26-remove-kth-last-element-linked-list.js",
     "27": "nodemon --exec babel-node code/27-matching-brackets.js",
     "28": "nodemon --exec babel-node code/28-justified-text.js",
-    "29": "nodemon --exec babel-node code/29-run-length-encoding-decoding.js"
+    "29": "nodemon --exec babel-node code/29-run-length-encoding-decoding.js",
+    "30": "nodemon --exec babel-node code/30-trapped-rainwater.js"
   },
   "keywords": [],
   "author": "",
