@@ -34,7 +34,10 @@
     "27": "nodemon --exec babel-node code/27-matching-brackets.js",
     "28": "nodemon --exec babel-node code/28-justified-text.js",
     "29": "nodemon --exec babel-node code/29-run-length-encoding-decoding.js",
-    "30": "nodemon --exec babel-node code/30-trapped-rainwater.js"
+    "30": "nodemon --exec babel-node code/30-trapped-rainwater.js",
+    "31": "nodemon --exec babel-node code/31-editing-distance.js",
+    "32": "nodemon --exec babel-node code/32-currency-exchange.js",
+    "33": "nodemon --exec babel-node code/33-running-median.js"
   },
   "keywords": [],
   "author": "",
