@@ -68,8 +68,8 @@ const minInsertions = (s) => {
     // const dp = [...Array(n + 1)].map(() => Array(n + 1).fill(0));
     const dp = Array(n + 1).fill().map(() => Array(n + 1).fill(0));
 
-    for (let i = 0; i < n; ++i) {
-        for (let j = 0; j < n; ++j) {
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
             dp[i + 1][j + 1] =
                 s.charAt(i) == s.charAt(n - 1 - j)
                     ? dp[i][j] + 1
@@ -77,6 +77,7 @@ const minInsertions = (s) => {
         }
     }
 
+    // console.log(dp);
     return n - dp[n][n];
 };
 
