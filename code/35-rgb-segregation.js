@@ -28,9 +28,11 @@ const segregate = (s) => {
     while (mid <= high) {
         switch (s[mid]) {
             case 'R':
-                temp = s[low];
-                s[low] = s[mid];
-                s[mid] = temp;
+                // swap value at low with value at mid
+                // temp = s[low];
+                // s[low] = s[mid];
+                // s[mid] = temp;
+                [s[low], s[mid]] = [s[mid], s[low]];  // using the ES6 javascript syntax
                 low++;
                 mid++;
                 break;
@@ -40,9 +42,11 @@ const segregate = (s) => {
                 break;
 
             case 'B':
-                temp = s[mid];
-                s[mid] = s[high];
-                s[high] = temp;
+                // swap value at high with value at high
+                // temp = s[mid];
+                // s[mid] = s[high];
+                // s[high] = temp;
+                [s[high], s[mid]] = [s[mid], s[high]];
                 high--;
                 break;
         }
