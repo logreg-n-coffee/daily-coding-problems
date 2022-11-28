@@ -11,6 +11,8 @@ For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'],
 it should become ['R', 'R', 'R', 'G', 'G', 'B', 'B'].
 */
 
+// Dutch national flag problem
+
 /**
  * @description segregate the values of the array so that all the Rs come first, then Gs, and the Bs come last. 
  * @param {string[]} s an array of strictly the characters 'R', 'G', and 'B',
