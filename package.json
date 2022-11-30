@@ -39,7 +39,12 @@
     "32": "nodemon --exec babel-node code/32-currency-exchange.js",
     "33": "nodemon --exec babel-node code/33-running-median.js",
     "34": "nodemon --exec babel-node code/34-insertion-palindrome.js",
-    "35": "nodemon --exec babel-node code/35-rgb-segregation.js"
+    "35": "nodemon --exec babel-node code/35-rgb-segregation.js",
+    "36": "nodemon --exec babel-node code/36-second-largest-node-in-BST.js",
+    "37": "nodemon --exec babel-node code/37-power-set-of-a-set.js",
+    "38": "nodemon --exec babel-node code/38-n-queens.js",
+    "39": "nodemon --exec babel-node code/39-conway-game-of-life.js",
+    "40": "nodemon --exec babel-node code/40-non-duplicated-int.js"
   },
   "keywords": [],
   "author": "",
