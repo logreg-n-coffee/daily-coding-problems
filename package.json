@@ -44,7 +44,8 @@
     "37": "nodemon --exec babel-node code/37-power-set-of-a-set.js",
     "38": "nodemon --exec babel-node code/38-n-queens.js",
     "39": "nodemon --exec babel-node code/39-conway-game-of-life.js",
-    "40": "nodemon --exec babel-node code/40-non-duplicated-int.js"
+    "40": "nodemon --exec babel-node code/40-non-duplicated-int.js",
+    "41": "nodemon --exec babel-node code/41-flight-itinerary.js"
   },
   "keywords": [],
   "author": "",
