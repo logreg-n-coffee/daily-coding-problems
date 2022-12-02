@@ -44,8 +44,11 @@ const getItinerary = (tickets, start) => {
     }
 
     // step 2: sort the destinations
-    flightMap.forEach((value, key) => {  // callbackFn in Map takes (value, key) instead of (key, value) 
-        value.sort();  //sort() sorts the array in lexicographical order (lexical smallest ones precede larger ones) -compare: sort((a - b) => a - b) 
+    flightMap.forEach((value) => {
+        // callbackFn in Map takes (value, key) instead of (key, value)
+        value.sort();
+        // sort() sorts and mutates the array in lexicographical order/ASCII character order (lexical smallest ones precede larger ones) 
+        // -compare: sort((a - b) => a - b)
     });
 
     // step 3: post order dfs to find the result 
