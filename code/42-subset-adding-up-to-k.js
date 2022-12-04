@@ -10,11 +10,13 @@ For example, given nums = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] 
 
 const subsetSum = (nums, k) => {
     const n = nums.length;
-    const dp = Array(n + 1).fill().map(() => Array(k + 1).fill(null));  // 2d array: dp[n + 1][k + 1]
+    const dp = Array(n + 1)
+        .fill()
+        .map(() => Array(k + 1).fill(null)); // 2d array: dp[n + 1][k + 1]
 
     // initialize first element in each row as an empty array - first column as an empty array
     for (let i = 0; i < n + 1; i++) {
-        dp[i][0] = []; 
+        dp[i][0] = [];
     }
 
     for (let i = 1; i < n + 1; i++) {
@@ -31,7 +33,7 @@ const subsetSum = (nums, k) => {
                 if (dp[i - 1][j] !== null) {
                     dp[i][j] = dp[i - 1][j];
                 } else if (dp[i - 1][j - last] !== null) {
-                    // if we can't make j without last, 
+                    // if we can't make j without last,
                     // then check if we can make j with last value by looking at (possible) array at dp[i - 1][j - last]
                     // if we can: copy over the array and append the last element to the array
                     dp[i][j] = dp[i - 1][j - last].concat(last);
@@ -48,7 +50,7 @@ const subsetSum = (nums, k) => {
 
 // Driver Code
 console.log(subsetSum([12, 1, 61, 5, 9, 2], 24));
-console.log(subsetSum([1, 2, 4], 3))
+console.log(subsetSum([1, 2, 4], 3));
 
 // Complexities: TC & SC: O(k * n)
 
