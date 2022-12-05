@@ -69,6 +69,10 @@ const findLongestPalindrome = (s) => {
     return longest;
 };
 
+// driver code:
+console.log(findLongestPalindrome('aabcdcb'));
+console.log(findLongestPalindrome('bananas'));
+
 /*
 rationale: 
 1. keep a dp array of n by n, where n is the length of the input string
