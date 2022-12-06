@@ -36,7 +36,7 @@ class Node {
 }
 
 const reconstructTree = (preorder, inorder) => {
-    // preorderIndex as a global variable
+    // preorderIndex as a local variable within the function scope
     let preorderIndex = 0;
 
     // execute the function
@@ -73,9 +73,44 @@ const reconstructTree = (preorder, inorder) => {
 };
 
 // driver code 
+
+// print preorder nodes
+function printPreorder(node) {
+    if (!node) return;
+
+    // first print the val
+    console.log(node.val);
+
+    // recur on the left children
+    printPreorder(node.left);
+
+    // recur on the right children
+    printPreorder(node.right);
+}
+
+// print inorder nodes 
+function printInorder(node) {
+    if (!node) return;
+    
+    // first recur on the left children
+    printInorder(node.left);
+
+    // print out the val
+    console.log(node.val);
+
+    // recur on the right children
+    printInorder(node.right);
+}
+
 const myTree = reconstructTree(
     ['a', 'b', 'd', 'e', 'c', 'f', 'g'],
     ['d', 'b', 'e', 'a', 'f', 'c', 'g']
 );
 
 console.log(myTree);
+
+console.log('preorder');
+printPreorder(myTree);
+
+console.log('inorder');
+printInorder(myTree);
