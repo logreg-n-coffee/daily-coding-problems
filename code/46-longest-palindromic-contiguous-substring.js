@@ -16,8 +16,8 @@ const findLongestPalindromeBF = (s) => {
         const length = s.length;
         let longest = '';
         
-        for (let i = 0; i < length - 1; i++) {
-            for (let j = 1; j < length; j++) {
+        for (let i = 0; i < length; i++) {
+            for (let j = 1; j < length + 1; j++) {
                 const substring = s.slice(i, j);
                 if (isPalindrome(substring) && substring.length > longest.length) {
                     longest = substring;
@@ -70,6 +70,9 @@ const findLongestPalindrome = (s) => {
 };
 
 // driver code:
+console.log(findLongestPalindromeBF('aabcdcb'));
+console.log(findLongestPalindromeBF('bananas'));
+
 console.log(findLongestPalindrome('aabcdcb'));
 console.log(findLongestPalindrome('bananas'));
 
