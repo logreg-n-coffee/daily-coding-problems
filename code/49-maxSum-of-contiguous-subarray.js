@@ -10,7 +10,7 @@ Do this in O(N) time.
 */
 
 /**
- * Find the maximum sum of any contiguous subarray of the array using brute force - O(n^2)
+ * Find the maximum sum of any contiguous subarray of the array using brute force - O(n^3)
  * @param {number[]} arr 
  * @returns {number} maximum sum of any contiguous subarray of the array
  */
@@ -28,7 +28,7 @@ const maxSumBF = (arr) => {
             //     }
             // };
             maxSum = Math.max(
-                substring.reduce((prev, curr) => prev + curr, 0),
+                substring.reduce((prev, curr) => prev + curr, 0),  // O(n) for summing up 
                 maxSum
             );
         }
@@ -37,19 +37,17 @@ const maxSumBF = (arr) => {
 };
 
 /**
- * Find the maximum sum of any contiguous subarray of the array by using two variables - 
+ * Find the maximum sum of any contiguous subarray of the array by using two variables - Kadane's algorithm
  * TC: O(n), Extra SC: O(1)
  * @param {number[]} arr 
  * @returns {number} maximum sum of any contiguous subarray of the array
  */
 const maxSumSubArray = (arr) => {
-    const n = arr.length;
+    let maxSum = 0;
+    let currentSum = 0;
 
-    let maxSum = arr[0];
-    let currentSum = arr[0];
-
-    for (let i = 1; i < n; i++) {
-        currentSum = Math.max(arr[i], currentSum + arr[i]);
+    for (const x of arr) {
+        currentSum = Math.max(x, currentSum + x);
         maxSum = Math.max(maxSum, currentSum);
     }
 
