@@ -54,7 +54,8 @@
     "47": "nodemon --exec babel-node code/47-max-profit.js",
     "48": "nodemon --exec babel-node code/48-tree-reconstruction.js",
     "49": "nodemon --exec babel-node code/49-maxSum-of-contiguous-subarray.js",
-    "50": "nodemon --exec babel-node code/50-b-tree-arithmetic-expression.js"
+    "50": "nodemon --exec babel-node code/50-b-tree-arithmetic-expression.js",
+    "51": "nodemon --exec babel-node code/51-shuffle-cards.js"
   },
   "keywords": [],
   "author": "",

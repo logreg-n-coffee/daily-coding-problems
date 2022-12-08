@@ -68,3 +68,5 @@ myTree.right.left = new Node('4');
 myTree.right.right = new Node('5');
 
 console.log(evalTree(myTree));
+
+// TC & Extra SC: O(N) - as it has to go through every node
