@@ -23,7 +23,7 @@ const solveSudoku = (board) => {
         const [r, c] = findFirstEmpty(board);
 
         // try the numbers (1-9) on board[r][c] 
-        for (let i = 0; i < 9; i++) {
+        for (let i = 1; i < 10; i++) {
             board[r][c] = i;
             // if the board is valid, continue solving
             if (isValidSoFar(board)) {
@@ -105,6 +105,7 @@ const solveSudoku = (board) => {
 };
 
 // driver code
+// sample sudoku from: https://en.wikipedia.org/wiki/Sudoku
 const mySudoku = [
     [5, 3, X, X, 7, X, X, X, X],
     [6, X, X, 1, 9, 5, X, X, X],
@@ -121,19 +122,22 @@ const solvedSudoku = solveSudoku(mySudoku);
 
 // reference solution 
 const refSolution = [
-    [5, 3, 0, 2, 7, 6, 4, 1, 8],
-    [6, 2, 4, 1, 9, 5, 3, 0, 7],
-    [1, 9, 8, 3, 4, 0, 5, 6, 2],
-    [8, 1, 2, 7, 6, 4, 0, 5, 3],
-    [4, 0, 6, 8, 5, 3, 7, 2, 1],
-    [7, 5, 3, 0, 2, 1, 8, 4, 6],
-    [0, 6, 1, 5, 3, 7, 2, 8, 4],
+    [5, 3, 4, 6, 7, 8, 9, 1, 2],
+    [6, 7, 2, 1, 9, 5, 3, 4, 8],
+    [1, 9, 8, 3, 4, 2, 5, 6, 7],
+    [8, 5, 9, 7, 6, 1, 4, 2, 3],
+    [4, 2, 6, 8, 5, 3, 7, 9, 1],
+    [7, 1, 3, 9, 2, 4, 8, 5, 6],
+    [9, 6, 1, 5, 3, 7, 2, 8, 4],
     [2, 8, 7, 4, 1, 9, 6, 3, 5],
-    [3, 4, 5, 6, 8, 2, 1, 7, 9],
+    [3, 4, 5, 2, 8, 6, 1, 7, 9],
 ];
 
-console.log('Here is the solved sudoku: ', solvedSudoku);
-console.log('Here is the solution for reference', refSolution);
+console.log('Solved Sudoku');
+console.table(solvedSudoku);
+
+console.log('Solution for reference');
+console.table(refSolution);
 
 // compare if the elements in the arrays are the same - no direct comparsionn in JS
 console.log('My answer matches the solution?', solvedSudoku.join() === refSolution.join());
