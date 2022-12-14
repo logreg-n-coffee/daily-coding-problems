@@ -34,6 +34,7 @@ const solveColoringProblem = (graph, k) => {
      */
     function isSafe(v, graph, colorArr, c) {
         for (let i = 0; i < V; i++) {
+            // go through the neighboring vertices of vertex v and check if it shares the same color as the vertex v
             if (graph[v][i] === 1 && c === colorArr[i]) {
                 return false;
             }
@@ -55,7 +56,7 @@ const solveColoringProblem = (graph, k) => {
             return true;
         }
 
-        // consider the vertex v and try different colors
+        // consider the vertex v and try different colors - c starts with 1 as 0 is used for no color
         for (let c = 1; c <= k; c++) {
             // check if assignment of color c to v is allowed
             if (isSafe(v, graph, colorArr, c)) {
