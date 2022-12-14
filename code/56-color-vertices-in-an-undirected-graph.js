@@ -14,8 +14,8 @@ const solveColoringProblem = (graph, k) => {
     const V = graph.length;  // number of vertices in graph
     const colorArr = Array(V).fill(0);  // populate color array with 0's
 
-    // call colorGraph for vertex 0
-    if (!colorGraph(graph, k, colorArr, 0)) {
+    // call colorable for vertex 0
+    if (!colorable(graph, k, colorArr, 0)) {
         console.log('There is no solution available for this graph.');
         return false;
     }
@@ -49,7 +49,7 @@ const solveColoringProblem = (graph, k) => {
      * @param {number} v 
      * @returns {boolean} if it is possible to color the graph with the given instructions
      */
-    function colorGraph(graph, k, colorArr, v) {
+    function colorable(graph, k, colorArr, v) {
         // base case: return true if all vertices are assigned to a color
         if (v === V) {
             return true;
@@ -62,7 +62,7 @@ const solveColoringProblem = (graph, k) => {
                 colorArr[v] = c;
 
                 // recur to assign colors to rest of verices
-                if (colorGraph(graph, k, colorArr, v + 1)) {
+                if (colorable(graph, k, colorArr, v + 1)) {
                     return true;
                 }
 
@@ -104,3 +104,6 @@ const myGraph = [
 const myK = 3;
 
 console.log(solveColoringProblem(myGraph, myK));
+
+// Time Complexity: O(k ^ V). 
+// Auxiliary Space Complexity: O(V). 
