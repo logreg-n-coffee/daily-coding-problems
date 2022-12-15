@@ -60,7 +60,8 @@
     "53": "nodemon --exec babel-node code/53-queue-with-two-stacks.js",
     "54": "nodemon --exec babel-node code/54-sudoku-solver.js",
     "55": "nodemon --exec babel-node code/55-url-shortener.js",
-    "56": "nodemon --exec babel-node code/56-color-vertices-in-an-undirected-graph.js"
+    "56": "nodemon --exec babel-node code/56-color-vertices-in-an-undirected-graph.js",
+    "57": "nodemon --exec babel-node code/57-break-string-into-k-lines.js"
   },
   "keywords": [],
   "author": "",
