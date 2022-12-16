@@ -61,7 +61,8 @@
     "54": "nodemon --exec babel-node code/54-sudoku-solver.js",
     "55": "nodemon --exec babel-node code/55-url-shortener.js",
     "56": "nodemon --exec babel-node code/56-color-vertices-in-an-undirected-graph.js",
-    "57": "nodemon --exec babel-node code/57-break-string-into-k-lines.js"
+    "57": "nodemon --exec babel-node code/57-break-string-into-k-lines.js",
+    "58": "nodemon --exec babel-node code/58-find-index-in-an-array.js"
   },
   "keywords": [],
   "author": "",
