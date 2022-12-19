@@ -18,7 +18,7 @@ Sounds great! But there's one problem: what if the files are of different length
 
 The solution to this problem is to change how we're matching blocks. After the receiver sends all the checksums, the sender can compute the checksum at every possible offset to find one that matches. If it does, then we just send all the data from the last point to the beginning of the current block, as well as some sort of signal that the block matched.
 
-P.S. This algorithm is how the rsync utility is implemented, and was first described here. It's surprisingly short and easy to read! A few things in the paper that aren't mentioned here:
+P.S. This algorithm is how the rsync utility is implemented, and was first described [here](https://www.andrew.cmu.edu/course/15-749/READINGS/required/cas/tridgell96.pdf). It's surprisingly short and easy to read! A few things in the paper that aren't mentioned here:
 
 Rolling checksums for efficiently computing checksums at every possible offset.
 Using a weak (rolling) checksum and a strong one for efficiency
