@@ -64,7 +64,9 @@
     "57": "nodemon --exec babel-node code/57-break-string-into-k-lines.js",
     "58": "nodemon --exec babel-node code/58-find-index-in-an-array.js",
     "60": "nodemon --exec babel-node code/60-partition-a-subset-into-two.js",
-    "61": "nodemon --exec babel-node code/61-int-exponentiation.js"
+    "61": "nodemon --exec babel-node code/61-int-exponentiation.js",
+    "62": "nodemon --exec babel-node code/62-matrix-top-left-to-bottom-right.js",
+    "63": "nodemon --exec babel-node code/63-find-a-word-in-a-matrix.js"
   },
   "keywords": [],
   "author": "",
