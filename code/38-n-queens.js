@@ -32,14 +32,7 @@ we should also have a set to keep track of which diagonals and anti-diagonals ha
 Diagonal and antidiagonal properties: 
 1. Diagonal: value at row - value at col is constant
 2. Antidiagonal: value at row + value at col is constant
-
-- Algorithm:
-
-
 */
-
-let solutions = [];
-let SIZE = -1;
 
 const solveNQueens = (n) => {
     solutions = [];
@@ -48,67 +41,68 @@ const solveNQueens = (n) => {
     // fill up the board with '.'
     const emptyBoard = Array(n).fill().map(() => Array(n).fill('.'));
 
-    backtrack(0, new Set(), new Set(), new Set(), emptyBoard, n);
+    backtrack(0, new Set(), new Set(), new Set(), emptyBoard);
 
     return solutions;
-};
 
-/**
- * 
- * @param {Number} row 
- * @param {Set<Number>} diagonals 
- * @param {Set<Number>} antidiagonals 
- * @param {Set<Number>} cols 
- * @param {String[][]} boardState 
- * @param {Number} n 
- * @returns 
- */
-function backtrack(row, diagonals, antidiagonals, cols, boardState) {
-    // base case - n queens are placed
-    if (row === SIZE) {
-        solutions.push(createBoard(boardState));
-        return;
-    }
-
-    for (let col = 0; col < SIZE; col++) {
-        // calculate the current diagonals and antidiagonals' indices
-        let currDiagonal = row - col;
-        let currAntidiagonal = row + col;
-
-        // if we can't place the queen
-        if (
-            cols.has(col) ||
-            diagonals.has(currDiagonal) ||
-            antidiagonals.has(currAntidiagonal)
-        ) {
-            continue;
+    /**
+     * 
+     * @param {Number} row 
+     * @param {Set<Number>} diagonals 
+     * @param {Set<Number>} antidiagonals 
+     * @param {Set<Number>} cols 
+     * @param {String[][]} boardState 
+     * @param {Number} n 
+     * @returns 
+     */
+    function backtrack(row, diagonals, antidiagonals, cols, boardState) {
+        // base case - n queens are placed
+        if (row === SIZE) {
+            solutions.push(createBoard(boardState));
+            return;
         }
 
-        // temp add the queen to the board
-        cols.add(col);
-        diagonals.add(currDiagonal);
-        antidiagonals.add(currAntidiagonal);
-        boardState[row][col] = 'Q';
+        for (let col = 0; col < SIZE; col++) {
+            // calculate the current diagonals and antidiagonals' indices
+            let currDiagonal = row - col;
+            let currAntidiagonal = row + col;
 
-        // move on to the next row with the updated board state
-        backtrack(row + 1, diagonals, antidiagonals, cols, boardState);
+            // if we can't place the queen
+            if (
+                cols.has(col) ||
+                diagonals.has(currDiagonal) ||
+                antidiagonals.has(currAntidiagonal)
+            ) {
+                continue;
+            }
 
-        // remove the queen from the board
-        cols.delete(col);
-        diagonals.delete(currDiagonal);
-        antidiagonals.delete(currAntidiagonal);
-        boardState[row][col] = '.';
+            // temp add the queen to the board
+            cols.add(col);
+            diagonals.add(currDiagonal);
+            antidiagonals.add(currAntidiagonal);
+            boardState[row][col] = 'Q';
+
+            // move on to the next row with the updated board state
+            backtrack(row + 1, diagonals, antidiagonals, cols, boardState);
+
+            // remove the queen from the board
+            cols.delete(col);
+            diagonals.delete(currDiagonal);
+            antidiagonals.delete(currAntidiagonal);
+            boardState[row][col] = '.';
+        }
     }
-}
 
-function createBoard(state) {
-    const board = [];
-    for (let row = 0; row < SIZE; row++) {
-        const currentRow = state[row].join('');
-        board.push(currentRow);
+    function createBoard(state) {
+        const board = [];
+        for (let row = 0; row < SIZE; row++) {
+            const currentRow = state[row].join('');
+            board.push(currentRow);
+        }
+        return board;
     }
-    return board;
-}
+};
+
 
 // driver code 
 console.log(solveNQueens(1));
