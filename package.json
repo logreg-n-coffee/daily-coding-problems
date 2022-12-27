@@ -67,7 +67,8 @@
     "61": "nodemon --exec babel-node code/61-int-exponentiation.js",
     "62": "nodemon --exec babel-node code/62-matrix-top-left-to-bottom-right.js",
     "63": "nodemon --exec babel-node code/63-find-a-word-in-a-matrix.js",
-    "64": "nodemon --exec babel-node code/64-knights-tours.js"
+    "64": "nodemon --exec babel-node code/64-knights-tours.js",
+    "65": "nodemon --exec babel-node code/65-print-clockwise-spiral.js"
   },
   "keywords": [],
   "author": "",
