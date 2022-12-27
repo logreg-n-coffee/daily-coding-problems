@@ -15,8 +15,8 @@ Similarly, given the target word 'MASS', you should return true, since it's the 
 */
 
 const findWord = (matrix, word) => {
-    const colLen = matrix.length;
-    const rowLen = matrix[0].length;
+    const rowLen = matrix.length;
+    const colLen = matrix[0].length;
 
     // define the direction of the pointer movement 
     const x = [1, 0];
