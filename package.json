@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "1": "nodemon --exec babel-node code/1-two-numbers-in-list.js",
-    "1-test": "nodemon --exec babel-node code/1-test.js",
     "2": "nodemon --exec babel-node code/2-product-except-self.js",
     "3": "nodemon --exec babel-node code/3-serialize-node.js",
     "4": "nodemon --exec babel-node code/4-lowest-positive-integer-that-does-not-exist.js",
@@ -28,7 +27,7 @@
     "21": "nodemon --exec babel-node code/21-min-classroom-required.js",
     "22": "nodemon --exec babel-node code/22-string-reconstruction-using-dictionary.js",
     "23": "nodemon --exec babel-node code/23-shortest-path-in-maze.js",
-    "24": "nodemon --exec babel-node code/24-binary-tree-locking.js", 
+    "24": "nodemon --exec babel-node code/24-binary-tree-locking.js",
     "25": "nodemon --exec babel-node code/25-regex-matching.js",
     "26": "nodemon --exec babel-node code/26-remove-kth-last-element-linked-list.js",
     "27": "nodemon --exec babel-node code/27-matching-brackets.js",
@@ -69,7 +68,8 @@
     "63": "nodemon --exec babel-node code/63-find-a-word-in-a-matrix.js",
     "64": "nodemon --exec babel-node code/64-knights-tours.js",
     "65": "nodemon --exec babel-node code/65-print-clockwise-spiral.js",
-    "66": "nodemon --exec babel-node code/66-unbiased-coin-toss-with-biased.js"
+    "66": "nodemon --exec babel-node code/66-unbiased-coin-toss-with-biased.js",
+    "67": "nodemon --exec ts-node code/67-least-frequently-used-cache.ts"
   },
   "keywords": [],
   "author": "",
@@ -78,10 +78,13 @@
     "@babel/core": "^7.18.6",
     "@babel/node": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
     "@babel/register": "^7.18.6",
     "chai": "^4.3.6",
     "mocha": "^10.0.0",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
