@@ -69,7 +69,9 @@
     "64": "nodemon --exec babel-node code/64-knights-tours.js",
     "65": "nodemon --exec babel-node code/65-print-clockwise-spiral.js",
     "66": "nodemon --exec babel-node code/66-unbiased-coin-toss-with-biased.js",
-    "67": "nodemon --exec ts-node code/67-least-frequently-used-cache.ts"
+    "67": "nodemon --exec ts-node code/67-least-frequently-used-cache.ts",
+    "68": "nodemon --exec ts-node code/68-bishop-attack.ts",
+    "69": "nodemon --exec ts-node code/69-largest-product-of-three.ts"
   },
   "keywords": [],
   "author": "",
