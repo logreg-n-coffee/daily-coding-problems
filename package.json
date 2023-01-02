@@ -71,7 +71,8 @@
     "66": "nodemon --exec babel-node code/66-unbiased-coin-toss-with-biased.js",
     "67": "nodemon --exec ts-node code/67-least-frequently-used-cache.ts",
     "68": "nodemon --exec ts-node code/68-bishop-attack.ts",
-    "69": "nodemon --exec ts-node code/69-largest-product-of-three.ts"
+    "69": "nodemon --exec ts-node code/69-largest-product-of-three.ts",
+    "70": "nodemon --exec ts-node code/70-nth-number-whose-digits-add-to-ten.ts"
   },
   "keywords": [],
   "author": "",
