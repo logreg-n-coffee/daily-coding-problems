@@ -72,7 +72,8 @@
     "67": "nodemon --exec ts-node code/67-least-frequently-used-cache.ts",
     "68": "nodemon --exec ts-node code/68-bishop-attack.ts",
     "69": "nodemon --exec ts-node code/69-largest-product-of-three.ts",
-    "70": "nodemon --exec ts-node code/70-nth-number-whose-digits-add-to-ten.ts"
+    "70": "nodemon --exec ts-node code/70-nth-number-whose-digits-add-to-ten.ts",
+    "71": "nodemon --exec ts-node code/71-rand5-uniform-probability.ts"
   },
   "keywords": [],
   "author": "",
