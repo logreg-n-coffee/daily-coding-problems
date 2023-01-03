@@ -75,7 +75,8 @@
     "70": "nodemon --exec ts-node code/70-nth-number-whose-digits-add-to-ten.ts",
     "71": "nodemon --exec ts-node code/71-rand5-uniform-probability.ts",
     "72": "nodemon --exec ts-node code/72-max-value-path.ts",
-    "73": "nodemon --exec ts-node code/73-reverse-singly-linked-list.ts"
+    "73": "nodemon --exec ts-node code/73-reverse-singly-linked-list.ts",
+    "74": "nodemon --exec ts-node code/74-repeating-number-in-a-table.ts"
   },
   "keywords": [],
   "author": "",
