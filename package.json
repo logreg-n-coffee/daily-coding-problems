@@ -76,7 +76,8 @@
     "71": "nodemon --exec ts-node code/71-rand5-uniform-probability.ts",
     "72": "nodemon --exec ts-node code/72-max-value-path.ts",
     "73": "nodemon --exec ts-node code/73-reverse-singly-linked-list.ts",
-    "74": "nodemon --exec ts-node code/74-repeating-number-in-a-table.ts"
+    "74": "nodemon --exec ts-node code/74-repeating-number-in-a-table.ts",
+    "75": "nodemon --exec ts-node code/75-longest-increasing-subsequence.ts"
   },
   "keywords": [],
   "author": "",
