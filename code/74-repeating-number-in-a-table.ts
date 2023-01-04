@@ -19,6 +19,7 @@ since the multiplication table looks like this:
 And there are 4 12's in the table.
 */
 
+// METHOD 1: Using Native JS/TS methods - O(N * N)
 const findNumberOfX = (n: number, x: number) => {
     const multiplicationTable = createMultiplicationTable(n);
 
@@ -40,3 +41,42 @@ console.log(findNumberOfX(6, 1));
 console.log(findNumberOfX(6, 2));
 console.log(findNumberOfX(6, 6));
 console.log(findNumberOfX(6, 12));
+
+
+// METHOD 2: Using counter - O(N * N)
+const solveMultiTable = (n: number, x: number): number => {
+    let count = 0;
+
+    for (let i = 1; i < n + 1; i++) {
+        for (let j = 1; j < n + 1; j++) {
+            if (i * j === x) count++;
+        }
+    }
+
+    return count;
+};
+
+console.log(solveMultiTable(6, 1));
+console.log(solveMultiTable(6, 2));
+console.log(solveMultiTable(6, 6));
+console.log(solveMultiTable(6, 12));
+
+// METHOD 3: Using math observation - O(n)
+const findMultitable = (n: number, x: number): number => { 
+    let count = 0;
+
+    for (let i = 1; i < n + 1; i++) {
+        // a particular row will match X if: 
+        // It is a factor of X and its corresponding factor is less than N (so it's still in the matrix).
+        if (x % i === 0 && x / i <= n) {
+            count++;
+        }
+    }
+    
+    return count;
+};
+
+console.log(findMultitable(6, 1));
+console.log(findMultitable(6, 2));
+console.log(findMultitable(6, 6));
+console.log(findMultitable(6, 12));
