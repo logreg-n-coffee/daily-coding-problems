@@ -26,7 +26,7 @@ const lengthLongestIncreasingSubsequence = (arr: number[]) => {
     
 };
 
-// driver code
+// driver code - O(N * N) time and O(N) space
 (() => {
     const myArr = [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15];
 
