@@ -78,7 +78,8 @@
     "73": "nodemon --exec ts-node code/73-reverse-singly-linked-list.ts",
     "74": "nodemon --exec ts-node code/74-repeating-number-in-a-table.ts",
     "75": "nodemon --exec ts-node code/75-longest-increasing-subsequence.ts",
-    "76": "nodemon --exec ts-node code/76-ordered-col-in-a-two-d-matrix.ts"
+    "76": "nodemon --exec ts-node code/76-ordered-col-in-a-two-d-matrix.ts",
+    "77": "nodemon --exec ts-node code/77-merge-overlapping-intervals.ts"
   },
   "keywords": [],
   "author": "",
