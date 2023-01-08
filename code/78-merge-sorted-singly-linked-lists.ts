@@ -52,6 +52,33 @@ const mergeListsSlow = (nodes: SinglyLinkedListNode[]): SinglyLinkedListNode | n
 // O(KN log KN) time and O(KN) space, where K is the number of lists and N is the number of elements in the largest list.
 
 
+/**
+ * merge all the inherently sorted lists into one sorted singly linked list with brute force
+ * @param nodes 
+ * @return a sorted singly linked list
+ */
+const mergeListsFast = (nodes: SinglyLinkedListNode[] | null[] | undefined[]): SinglyLinkedListNode | null => { 
+    const newHead: SinglyLinkedListNode = new SinglyLinkedListNode(-1); // create a dummy head
+    let current: SinglyLinkedListNode | null  = newHead;
+
+    // while all of the node head are not null
+    while (!(nodes as any[]).every((node) => node === null || node === undefined)) {
+        // get min of all non-null lists
+        const values = nodes.map(node => node?.data);
+        const currMin = Math.min(...values.filter(node => node !== null && node !== undefined));
+        const currMinIdx = nodes.findIndex(node => node?.data === currMin);
+ 
+        nodes[currMinIdx] = nodes[currMinIdx]?.next;
+        current.next = new SinglyLinkedListNode(currMin);
+        current = current.next;
+    }
+
+    return newHead.next;
+};
+// Inherent Sortedness: keep track of current location in each linked list, pick the mim of all the pointers
+// Once we've picked one, we can move that pointer up.
+// O(KN * K) time and O(K) space
+
 // driver code 
 (() => { 
     const listOne = new SinglyLinkedListNode(0);
@@ -77,5 +104,6 @@ const mergeListsSlow = (nodes: SinglyLinkedListNode[]): SinglyLinkedListNode | n
 
     const nodes = [listOne, listTwo, listThree];
 
-    mergeListsSlow(nodes)?.print();
+    // mergeListsSlow(nodes)?.print();
+    mergeListsFast(nodes)?.print();
 })();
