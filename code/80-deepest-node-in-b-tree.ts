@@ -9,12 +9,12 @@ d
  */
 
 class BTree {
-    root: any;
+    data: any;
     left: BTree | null;
     right: BTree | null;
 
-    constructor(root: any) {
-        this.root = root;
+    constructor(data: any) {
+        this.data = data;
         this.left = null;
         this.right = null;
     }
@@ -56,7 +56,7 @@ const findDeepestNode = (root: BTree): BTree | null | undefined => {
     root.right.left.right.left = new BTree(9);
 
     console.log('root', root);
-    console.log(findDeepestNode(root));
+    console.log(findDeepestNode(root)?.data);
 
     const anotherRoot = new BTree(1);
     anotherRoot.left = new BTree(2);
@@ -68,7 +68,7 @@ const findDeepestNode = (root: BTree): BTree | null | undefined => {
     anotherRoot.right.right.right = new BTree(8);
 
     console.log('another root', anotherRoot);
-    console.log(findDeepestNode(anotherRoot));
+    console.log(findDeepestNode(anotherRoot)?.data);
 
     const yetAnotherRoot = new BTree(1);
     yetAnotherRoot.left = new BTree(2);
@@ -76,5 +76,5 @@ const findDeepestNode = (root: BTree): BTree | null | undefined => {
     yetAnotherRoot.right.left = new BTree(6);
 
     console.log('yet another root', yetAnotherRoot);
-    console.log(findDeepestNode(yetAnotherRoot));
+    console.log(findDeepestNode(yetAnotherRoot)?.data);
 })();
