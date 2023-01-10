@@ -81,7 +81,8 @@
     "76": "nodemon --exec ts-node code/76-ordered-col-in-a-two-d-matrix.ts",
     "77": "nodemon --exec ts-node code/77-merge-overlapping-intervals.ts",
     "78": "nodemon --exec ts-node code/78-merge-sorted-singly-linked-lists.ts",
-    "79": "nodemon --exec ts-node code/79-modify-one-element-to-make-it-no-decreasing.ts"
+    "79": "nodemon --exec ts-node code/79-modify-one-element-to-make-it-no-decreasing.ts",
+    "80": "nodemon --exec ts-node code/80-deepest-node-in-b-tree.ts"
   },
   "keywords": [],
   "author": "",
