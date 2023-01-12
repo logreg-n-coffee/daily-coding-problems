@@ -85,7 +85,8 @@
     "80": "nodemon --exec ts-node code/80-deepest-node-in-b-tree.ts",
     "81": "nodemon --exec ts-node code/81-phone-number-mapping.ts",
     "82": "nodemon --exec babel-node code/82-read-n-based-on-read-7.js",
-    "83": "nodemon --exec ts-node code/83-invert-b-tree.ts"
+    "83": "nodemon --exec ts-node code/83-invert-b-tree.ts",
+    "84": "nodemon --exec ts-node code/84-count-islands.ts"
   },
   "keywords": [],
   "author": "",
