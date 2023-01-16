@@ -88,7 +88,8 @@
     "83": "nodemon --exec ts-node code/83-invert-b-tree.ts",
     "84": "nodemon --exec ts-node code/84-count-islands.ts",
     "85": "nodemon --exec ts-node code/85-switch-x-y-b.ts",
-    "86": "nodemon --exec ts-node code/86-matching-parentheses.ts"
+    "86": "nodemon --exec ts-node code/86-matching-parentheses.ts",
+    "87": "nodemon --exec ts-node code/87-check-directions.ts"
   },
   "keywords": [],
   "author": "",
