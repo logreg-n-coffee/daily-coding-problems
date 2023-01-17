@@ -91,7 +91,8 @@
     "86": "nodemon --exec ts-node code/86-matching-parentheses.ts",
     "87": "nodemon --exec ts-node code/87-check-directions.ts",
     "88": "nodemon --exec ts-node code/88-division.ts",
-    "89": "nodemon --exec ts-node code/89-valid-bst.ts"
+    "89": "nodemon --exec ts-node code/89-valid-bst.ts",
+    "90": "nodemon --exec ts-node code/90-random-number-not-in-the-list.ts"
   },
   "keywords": [],
   "author": "",
