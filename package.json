@@ -94,7 +94,8 @@
     "89": "nodemon --exec ts-node code/89-valid-bst.ts",
     "90": "nodemon --exec ts-node code/90-random-number-not-in-the-list.ts",
     "91": "nodemon --exec python3 code/91-function-print.py",
-    "92": "nodemon --exec ts-node code/92-course-dependency.ts"
+    "92": "nodemon --exec ts-node code/92-course-dependency.ts",
+    "93": "nodemon --exec ts-node code/93-largest-subtree-that-is-a-bst"
   },
   "keywords": [],
   "author": "",
