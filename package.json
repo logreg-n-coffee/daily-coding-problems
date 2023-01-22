@@ -96,7 +96,8 @@
     "91": "nodemon --exec python3 code/91-function-print.py",
     "92": "nodemon --exec ts-node code/92-course-dependency.ts",
     "93": "nodemon --exec ts-node code/93-largest-subtree-that-is-a-bst",
-    "94": "nodemon --exec ts-node code/94-b-tree-max-path-sum.ts"
+    "94": "nodemon --exec ts-node code/94-b-tree-max-path-sum.ts",
+    "95": "nodemon --exec ts-node code/95-next-greater-permutation-of-a-num.ts"
   },
   "keywords": [],
   "author": "",
