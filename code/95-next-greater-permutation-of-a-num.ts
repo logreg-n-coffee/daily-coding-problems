@@ -3,13 +3,13 @@ Given a number represented by a list of digits,
 find the next greater permutation of a number, in terms of lexicographic ordering. 
 If there is not greater permutation possible, return the permutation with the lowest value/ordering.
 
-For example, the list [1,2,3] should return [1,3,2]. 
-The list [1,3,2] should return [2,1,3]. The list [3,2,1] should return [1,2,3].
+For example, the list [1, 2, 3] should return [1, 3, 2]. 
+The list [1, 3, 2] should return [2, 1, 3]. The list [3, 2, 1] should return [1, 2, 3].
 
 A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
 
-For example, for arr = [1,2,3], the following are all the permutations of arr: 
-[1,2,3], [1,3,2], [2, 1, 3], [2, 3, 1], [3,1,2], [3,2,1].
+For example, for arr = [1, 2, 3], the following are all the permutations of arr: 
+[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1].
 The next permutation of an array of integers is 
 the next lexicographically greater permutation of its integer. 
 More formally, if all the permutations of the array are sorted in one container 
@@ -18,9 +18,9 @@ the permutation that follows it in the sorted container.
 If such arrangement is not possible, the array must be rearranged as the lowest possible order 
 (i.e., sorted in ascending order).
 
-For example, the next permutation of arr = [1,2,3] is [1,3,2].
-Similarly, the next permutation of arr = [2,3,1] is [3,1,2].
-While the next permutation of arr = [3,2,1] is [1,2,3] because [3,2,1] does not 
+For example, the next permutation of arr = [1, 2, 3] is [1, 3, 2].
+Similarly, the next permutation of arr = [2, 3, 1] is [3, 1, 2].
+While the next permutation of arr = [3, 2, 1] is [1, 2, 3] because [3, 2, 1] does not 
 have a lexicographical larger rearrangement.
 Given an array of integers nums, find the next permutation of nums.
  */
