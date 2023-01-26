@@ -101,7 +101,8 @@
     "96": "nodemon --exec ts-node code/96-permutations-of-an-array.ts",
     "97": "nodemon --exec ts-node code/97-time-map.ts",
     "98": "nodemon --exec ts-node code/98-find-word-in-matrix.ts",
-    "99": "nodemon --exec ts-node code/99-longest-consecutive-sequence.ts"
+    "99": "nodemon --exec ts-node code/99-longest-consecutive-sequence.ts",
+    "100": "nodemon --exec ts-node code/100-min-steps-in-infinite-grid.ts"
   },
   "keywords": [],
   "author": "",
