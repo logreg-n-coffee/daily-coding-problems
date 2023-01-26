@@ -51,112 +51,115 @@ If any such path were possible, we would have already explored it.
 // to a destination cell.
 
 // To store matrix cell coordinates
-class Point {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
-}
 
-// A data structure for queue used in BFS
-class Node {
-    constructor(pt, dist) {
-        this.pt = pt; // The coordinates of the cell
-        this.dist = dist; // Cell's distance from the source
-    }
-}
-
-// Check whether given cell(row,col)
-// is a valid cell or not
-function isValid(row, col, mat) {
-    const m = mat.length;
-    const n = mat[0].length;
-    return row >= 0 && row < m && col >= 0 && col < n;
-}
-
-// These arrays are used to get row and column
-// numbers of 4 neighbours of a given cell
-let rowNum = [-1, 0, 0, 1];
-let colNum = [0, -1, 1, 0];
-
-// Function to find the shortest path between
-// a given source cell to a destination cell.
-function BFS(mat, src, dest) {
-    const m = mat.length; // 9
-    const n = mat[0].length; // 10
-    // base case: check source and destination cell
-    // of the matrix have value 0 (unvisitable at the beginning)
-    if (mat[src.x][src.y] !== 0 || mat[dest.x][dest.y] !== 0) return -1;
-
-    // initialize a matrix of m * n using fill and map method chain
-    let visited = Array(m)
-        .fill(false)
-        .map(() => Array(n).fill(false));
-
-    // Mark the source cell as visited
-    visited[src.x][src.y] = true;
-
-    // Create a queue for BFS
-    let q = [];
-
-    // Distance of source cell is 0
-    let s = new Node(src, 0);
-    q.push(s); // Enqueue source cell
-
-    // Do a BFS starting from source cell
-    while (q) {
-        let curr = q.shift(); // Dequeue the front cell
-
-        console.log(curr); // examine the queue
-
-        // If we have reached the destination cell,
-        // we are done
-        let pt = curr.pt;
-        if (pt.x == dest.x && pt.y == dest.y) return curr.dist;
-
-        // Otherwise enqueue its adjacent cells
-        for (let i = 0; i < 4; i++) {
-            let row = pt.x + rowNum[i];
-            let col = pt.y + colNum[i];
-
-            // if adjacent cell is valid, has path
-            // and not visited yet, enqueue it.
-            if (
-                isValid(row, col, mat) && // is valid
-                mat[row][col] === 0 && // has path
-                !visited[row][col] // not visited yet
-            ) {
-                visited[row][col] = true;
-                let adjCell = new Node(new Point(row, col), curr.dist + 1);
-                q.push(adjCell);
-            }
+(() => { 
+    class Point {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
         }
     }
-    // Return -1 if destination cannot be reached
-    return -1;
-}
 
-// Driver code
-function main() {
-    let mat = [
-        [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
-        [0, 1, 0, 1, 0, 0, 0, 1, 0, 0],
-        [0, 0, 0, 1, 0, 0, 1, 0, 1, 0],
-        [1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
-        [0, 0, 0, 1, 0, 0, 0, 1, 0, 1],
-        [0, 1, 0, 0, 0, 0, 1, 0, 1, 1],
-        [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-        [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
-        [0, 0, 1, 1, 1, 1, 0, 1, 1, 0],
-    ];
+    // A data structure for queue used in BFS
+    class Node {
+        constructor(pt, dist) {
+            this.pt = pt; // The coordinates of the cell
+            this.dist = dist; // Cell's distance from the source
+        }
+    }
 
-    let source = new Point(0, 0);
-    let dest = new Point(3, 4);
+    // Check whether given cell(row,col)
+    // is a valid cell or not
+    function isValid(row, col, mat) {
+        const m = mat.length;
+        const n = mat[0].length;
+        return row >= 0 && row < m && col >= 0 && col < n;
+    }
 
-    let dist = BFS(mat, source, dest);
+    // These arrays are used to get row and column
+    // numbers of 4 neighbours of a given cell
+    let rowNum = [-1, 0, 0, 1];
+    let colNum = [0, -1, 1, 0];
 
-    if (dist !== -1) console.log('Shortest Path is', dist);
-    else console.log("Shortest Path doesn't exist");
-}
+    // Function to find the shortest path between
+    // a given source cell to a destination cell.
+    function BFS(mat, src, dest) {
+        const m = mat.length; // 9
+        const n = mat[0].length; // 10
+        // base case: check source and destination cell
+        // of the matrix have value 0 (unvisitable at the beginning)
+        if (mat[src.x][src.y] !== 0 || mat[dest.x][dest.y] !== 0) return -1;
 
-main();
+        // initialize a matrix of m * n using fill and map method chain
+        let visited = Array(m)
+            .fill(false)
+            .map(() => Array(n).fill(false));
+
+        // Mark the source cell as visited
+        visited[src.x][src.y] = true;
+
+        // Create a queue for BFS
+        let q = [];
+
+        // Distance of source cell is 0
+        let s = new Node(src, 0);
+        q.push(s); // Enqueue source cell
+
+        // Do a BFS starting from source cell
+        while (q) {
+            let curr = q.shift(); // Dequeue the front cell
+
+            console.log(curr); // examine the queue
+
+            // If we have reached the destination cell,
+            // we are done
+            let pt = curr.pt;
+            if (pt.x == dest.x && pt.y == dest.y) return curr.dist;
+
+            // Otherwise enqueue its adjacent cells
+            for (let i = 0; i < 4; i++) {
+                let row = pt.x + rowNum[i];
+                let col = pt.y + colNum[i];
+
+                // if adjacent cell is valid, has path
+                // and not visited yet, enqueue it.
+                if (
+                    isValid(row, col, mat) && // is valid
+                    mat[row][col] === 0 && // has path
+                    !visited[row][col] // not visited yet
+                ) {
+                    visited[row][col] = true;
+                    let adjCell = new Node(new Point(row, col), curr.dist + 1);
+                    q.push(adjCell);
+                }
+            }
+        }
+        // Return -1 if destination cannot be reached
+        return -1;
+    }
+
+    // Driver code
+    function main() {
+        let mat = [
+            [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
+            [0, 1, 0, 1, 0, 0, 0, 1, 0, 0],
+            [0, 0, 0, 1, 0, 0, 1, 0, 1, 0],
+            [1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
+            [0, 0, 0, 1, 0, 0, 0, 1, 0, 1],
+            [0, 1, 0, 0, 0, 0, 1, 0, 1, 1],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
+            [0, 0, 1, 1, 1, 1, 0, 1, 1, 0],
+        ];
+
+        let source = new Point(0, 0);
+        let dest = new Point(3, 4);
+
+        let dist = BFS(mat, source, dest);
+
+        if (dist !== -1) console.log('Shortest Path is', dist);
+        else console.log("Shortest Path doesn't exist");
+    }
+
+    main();
+})();
