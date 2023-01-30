@@ -39,14 +39,46 @@ One path may be to increase the range to compensate, another path may be to omit
 With the logic branching, a linear solution can no longer work.
  */
 
+// solve the question in brute force - TC: O(n^2) SC: O(1)
+const findContiguousBruteForce = (lst: number[], k: number): number[] | null => { 
+    for (let i = 0; i < lst.length; i++) {
+        for (let j = i; j < lst.length; j++) { 
+            if (sum(lst.slice(i, j + 1)) === k) {
+                return lst.slice(i, j + 1);
+            }
+        }
+    }
+
+    return null;
+
+    function sum(arr: number[]) {
+        return arr.reduce((prev, curr) => prev + curr, 0);
+    }
+};
+
+
 (() => { 
     console.log(
         findContiguousElementsSumToK(
-            [1, 2, 3, 4, 5], 3)
+            [1, 2, 3, 4, 5], 3
+        )
     );
 
     console.log(
         findContiguousElementsSumToK(
-            [2, 3, 5, 8, 13], 8)
+            [2, 3, 5, 8, 13], 8
+        )
+    );
+
+    console.log(
+        findContiguousBruteForce(
+            [1, 2, 3, 4, 5], 3
+        )
+    );
+
+    console.log(
+        findContiguousBruteForce(
+            [2, 3, 5, 8, 13], 8
+        )
     );
 })();
