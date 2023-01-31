@@ -105,7 +105,8 @@
     "100": "nodemon --exec ts-node code/100-min-steps-in-infinite-grid.ts",
     "101": "nodemon --exec ts-node code/101-find-two-prime-nums-adding-to-n.ts",
     "102": "nodemon --exec ts-node code/102-contiguous-integers-sum-to-k.ts",
-    "103": "nodemon --exec ts-node code/103-shortest-substring.ts"
+    "103": "nodemon --exec ts-node code/103-shortest-substring.ts",
+    "104": "nodemon --exec ts-node code/104-palindrome-linked-list.ts"
   },
   "keywords": [],
   "author": "",
