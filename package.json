@@ -107,7 +107,8 @@
     "102": "nodemon --exec ts-node code/102-contiguous-integers-sum-to-k.ts",
     "103": "nodemon --exec ts-node code/103-shortest-substring.ts",
     "104": "nodemon --exec ts-node code/104-palindrome-linked-list.ts",
-    "105": "nodemon --exec ts-node code/105-debounce-function.ts"
+    "105": "nodemon --exec ts-node code/105-debounce-function.ts",
+    "106": "nodemon --exec ts-node code/106-hop-to-the-last-index.ts"
   },
   "keywords": [],
   "author": "",
