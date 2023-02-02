@@ -20,14 +20,23 @@ class BTree {
     }
 }
 
+/**
+ * Find the deepest node using breadth-first search
+ * @param root 
+ * @returns the deepest node after the breadth-first search is completed
+ */
 const findDeepestNode = (root: BTree): BTree | null | undefined => { 
-    let current = null;
-
+    // if root is null or undefined then return null
     if (!root) return null;
+
+    // for bfs - after bfs search is completed the node is automatically the deepest node
+    let current = null;
 
     // create a queue
     const q: BTree[] = [];
     q.push(root);
+
+    // as the tree branches out, there is no need to track visited nodes
 
     // iterate until q is empty
     while (q.length > 0) { 
@@ -42,6 +51,10 @@ const findDeepestNode = (root: BTree): BTree | null | undefined => {
 
     return current;
 };
+
+// Complexity Analysis:
+    // Time: O(V + E), where V is the number of vertices / nodes and E is the number of edges
+    // Aux. Space: O(V)
 
 // driver code 
 (() => { 
