@@ -110,7 +110,8 @@
     "105": "nodemon --exec ts-node code/105-debounce-function.ts",
     "106": "nodemon --exec ts-node code/106-hop-to-the-last-index.ts",
     "107": "nodemon --exec ts-node code/107-print-b-tree-level-wise.ts",
-    "108": "nodemon --exec ts-node code/108-string-shift.ts"
+    "108": "nodemon --exec ts-node code/108-string-shift.ts",
+    "109": "nodemon --exec ts-node code/109-swap-even-odd.bits.ts"
   },
   "keywords": [],
   "author": "",
