@@ -62,3 +62,9 @@ Return [[1, 2], [1, 3, 4], [1, 3, 5]].
         console.log(pathsFromRootToLeaves(tree));
     })();
 })();
+
+/*
+Complexity analysis: 
+TC: O(N), where N is the number of nodes in the binary tree
+SC: O(H), where H is the height of the binary tree, or O(log N) for the average case, worst case O(N) for skewed tree
+ */
