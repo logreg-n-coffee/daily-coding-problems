@@ -45,7 +45,7 @@ const findAnagrams = (w: string, s: string): number[] => {
 };
 
 // complexity: time complexity - O(n), where n is the length of string s; space complexity - O(1) - arrays are constant 
-(() => { n
+(() => {
     console.log(findAnagrams('ab', 'abxaba'));
 })();
 
