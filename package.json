@@ -113,7 +113,8 @@
     "108": "nodemon --exec ts-node code/108-string-shift.ts",
     "109": "nodemon --exec ts-node code/109-swap-even-odd.bits.ts",
     "110": "nodemon --exec ts-node code/110-btree-root-to-leaves-path.ts",
-    "111": "nodemon --exec ts-node code/111-find-anagrams.ts"
+    "111": "nodemon --exec ts-node code/111-find-anagrams.ts",
+    "112": "nodemon --exec ts-node code/112-lowest-common-ancestor.ts"
   },
   "keywords": [],
   "author": "",
