@@ -11,7 +11,8 @@ Follow-up: given a mutable string representation, can you perform this operation
     // solve the problem with string reconstruction
     const reverse = (sentence: string): string => { 
         const words = sentence.split(' ');
-        return words.reduce((acc, word) =>  word + ' ' + acc, '');
+        return words.reduce((acc, word) => word + ' ' + acc, '');
+        // also: return words.reverse().join(' ');
     };
 
     console.log(reverse('hello world here'));
