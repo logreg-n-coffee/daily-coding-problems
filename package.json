@@ -117,7 +117,8 @@
     "112": "nodemon --exec ts-node code/112-lowest-common-ancestor.ts",
     "113": "nodemon --exec ts-node code/113-reverse-words-in-string.ts",
     "114": "nodemon --exec ts-node code/114-reverse-words-with-delimiters.ts",
-    "115": "nodemon --exec ts-node code/115-is-subtree.ts"
+    "115": "nodemon --exec ts-node code/115-is-subtree.ts",
+    "116": "nodemon --exec ts-node code/116-generate-finite-btree.ts"
   },
   "keywords": [],
   "author": "",
