@@ -118,7 +118,9 @@
     "113": "nodemon --exec ts-node code/113-reverse-words-in-string.ts",
     "114": "nodemon --exec ts-node code/114-reverse-words-with-delimiters.ts",
     "115": "nodemon --exec ts-node code/115-is-subtree.ts",
-    "116": "nodemon --exec ts-node code/116-generate-finite-btree.ts"
+    "116": "nodemon --exec ts-node code/116-generate-finite-btree.ts",
+    "117": "nodemon --exec ts-node code/117-min-sum-level-in-btree.ts",
+    "118": "nodemon --exec ts-node code/118-square-elements-in-sorted-array.ts"
   },
   "keywords": [],
   "author": "",
