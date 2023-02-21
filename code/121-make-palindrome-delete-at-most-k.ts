@@ -41,20 +41,28 @@
             }
 
             const n = s.length;
+            // We define an N by N table dp
+            // dp[i][j] will represent the length of the longest palindromic substring starting at i and ending at j
             const dp: number[][] = Array(n).fill(0).map(() => Array(n).fill(0));
 
+            // loop from the last character of the string 
             for (let i = n - 1; i >= 0; i--) { 
+                // a character is a palindrome by itself
                 dp[i][i] = 1;
                 
                 for (let j = i + 1; j < n; j++) { 
                     if (s[i] === s[j]) {
-                        dp[i][j] = 2 + dp[i + 1][j - 1];
+                        // take the longest palindromic subsequence from s[i + 1] to j[i - 1] and add two 
+                        dp[i][j] = 2 + dp[i + 1][j - 1];  // we have two more characters at the ends
                     } else {
+                        // if s[i] !== s[j]
+                        // take the maximum of the longest palindromic subsequences of ranges i + 1 to j, or i to j - 1
                         dp[i][j] = Math.max(dp[i + 1][j], dp[i][j - 1]);
                     }
                 }
             }
 
+            // return the result after the loop - take i === 0 as i loops from back to front; take j === n - 1
             return dp[0][n - 1];
         }
     };
