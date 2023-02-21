@@ -124,7 +124,8 @@
     "119": "nodemon --exec ts-node code/119-smallest-overlapping-interval.ts",
     "121": "nodemon --exec ts-node code/121-make-palindrome-delete-at-most-k.ts",
     "122": "nodemon --exec ts-node code/122-max-sum-in-matrix.ts",
-    "123": "nodemon --exec ts-node code/123-is-a-string-number.ts"
+    "123": "nodemon --exec ts-node code/123-is-a-string-number.ts",
+    "124": "nodemon --exec ts-node code/124-flip-n-coins.ts"
   },
   "keywords": [],
   "author": "",
