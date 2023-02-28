@@ -122,6 +122,7 @@
     "117": "nodemon --exec ts-node code/117-min-sum-level-in-btree.ts",
     "118": "nodemon --exec ts-node code/118-square-elements-in-sorted-array.ts",
     "119": "nodemon --exec ts-node code/119-smallest-overlapping-interval.ts",
+    "120": "nodemon --exec ts-node code/120-singleton-pattern-with-a-twist.ts",
     "121": "nodemon --exec ts-node code/121-make-palindrome-delete-at-most-k.ts",
     "122": "nodemon --exec ts-node code/122-max-sum-in-matrix.ts",
     "123": "nodemon --exec ts-node code/123-is-a-string-number.ts",
