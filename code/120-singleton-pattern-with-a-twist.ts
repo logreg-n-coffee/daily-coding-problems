@@ -21,18 +21,30 @@ class SingletonTwist {
     public static getInstance(): SingletonTwist {
         if (!SingletonTwist.instance1) {
             SingletonTwist.instance1 = new SingletonTwist();
+            console.log('SingletonTwist instance 1 running.');
             return SingletonTwist.instance1;
         } else if (!SingletonTwist.instance2) { 
             SingletonTwist.instance2 = new SingletonTwist();
+            console.log('SingletonTwist instance 2 running.');
             return SingletonTwist.instance2;
         } else {
             // if we created instance1 and instance2 already
             SingletonTwist.count++;
-            if (SingletonTwist.count % 2 === 0) {
+            if (SingletonTwist.count % 2 === 1) {
+                console.log('Already created instance, returning instance 1.');
                 return SingletonTwist.instance1;
             } else {
+                console.log('Already created instance, returning instance 2.');
                 return SingletonTwist.instance2;
             }
         }
     }
 }
+
+(() => { 
+    SingletonTwist.getInstance();
+    SingletonTwist.getInstance();
+    SingletonTwist.getInstance();
+    SingletonTwist.getInstance();
+    SingletonTwist.getInstance();
+})();

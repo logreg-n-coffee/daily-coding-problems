@@ -9,7 +9,7 @@
  * @param {number} k
  * @return {boolean} if two numbers from the list add up to k
  */
-export const twoSum = (nums, k) => {
+const twoSum = (nums, k) => {
   const comp = [];
   for (let i = 0; i < nums.length; i++) {  // for loop 
     if (comp[nums[i]] >= 0) {
@@ -26,7 +26,7 @@ export const twoSum = (nums, k) => {
  * @param {number} k
  * @return {Array|undefined} if two numbers from the list add up to k, return the indices of the two numbers from the list
  */
-export const twoSumIndex = (nums, k) => {
+const twoSumIndex = (nums, k) => {
   const comp = [];
   for (let i = 0; i < nums.length; i++) {
     if (comp[nums[i]] >= 0) {
