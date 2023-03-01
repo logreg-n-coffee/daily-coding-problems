@@ -132,7 +132,9 @@
     "127": "nodemon --exec ts-node code/127-sum-of-two-linked-lists.ts",
     "128": "nodemon --exec ts-node code/128-tower-of-hanoi.ts",
     "129": "nodemon --exec ts-node code/129-find-square-root.ts",
-    "130": "nodemon --exec ts-node code/130-max-profit-stock-trade-k-times.ts"
+    "130": "nodemon --exec ts-node code/130-max-profit-stock-trade-k-times.ts",
+    "131": "nodemon --exec ts-node code/131-deep-clone-a-list-with-random-pointer.ts",
+    "132": "nodemon --exec ts-node code/132-hit-counter.ts"
   },
   "keywords": [],
   "author": "",
