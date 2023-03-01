@@ -1,3 +1,12 @@
+"""_summary_
+
+    1. First, double the linked list by interleaving it with cloned nodes (without random set). 
+    For example, given 1 -> 2 -> 3, becomes 1 -> 1 -> 2 -> 2 -> 3 -> 3.
+    2. Set the cloned nodes' random by following the original, previous node's random.next.
+    3. Restore the linked lists by separating them. For example, each original nodes need to set node.next = node.next.next.
+"""
+
+
 class Node:
     def __init__(self, val):
         self.val = val
