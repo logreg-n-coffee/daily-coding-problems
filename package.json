@@ -134,7 +134,8 @@
     "129": "nodemon --exec ts-node code/129-find-square-root.ts",
     "130": "nodemon --exec ts-node code/130-max-profit-stock-trade-k-times.ts",
     "131": "nodemon --exec ts-node code/131-deep-clone-a-list-with-random-pointer.ts",
-    "132": "nodemon --exec ts-node code/132-hit-counter.ts"
+    "132": "nodemon --exec ts-node code/132-hit-counter.ts",
+    "133": "nodemon --exec ts-node code/133-inorder-successor.ts"
   },
   "keywords": [],
   "author": "",
