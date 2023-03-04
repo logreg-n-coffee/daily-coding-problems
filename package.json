@@ -135,7 +135,8 @@
     "130": "nodemon --exec ts-node code/130-max-profit-stock-trade-k-times.ts",
     "131": "nodemon --exec ts-node code/131-deep-clone-a-list-with-random-pointer.ts",
     "132": "nodemon --exec ts-node code/132-hit-counter.ts",
-    "133": "nodemon --exec ts-node code/133-inorder-successor.ts"
+    "133": "nodemon --exec ts-node code/133-inorder-successor.ts",
+    "134": "nodemon --exec ts-node code/134-sparse-array.ts"
   },
   "keywords": [],
   "author": "",
