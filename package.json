@@ -139,7 +139,8 @@
     "134": "nodemon --exec ts-node code/134-sparse-array.ts",
     "135": "nodemon --exec ts-node code/135-b-tree-max-path-sum.ts",
     "136": "nodemon --exec ts-node code/136-largest-rectangle-in-a-matrix.ts",
-    "137": "nodemon --exec ts-node code/137-bit-array.ts"
+    "137": "nodemon --exec ts-node code/137-bit-array.ts",
+    "138": "nodemon --exec ts-node code/138-min-coins-needed-to-make-n-cents.ts"
   },
   "keywords": [],
   "author": "",
