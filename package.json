@@ -137,7 +137,8 @@
     "132": "nodemon --exec ts-node code/132-hit-counter.ts",
     "133": "nodemon --exec ts-node code/133-inorder-successor.ts",
     "134": "nodemon --exec ts-node code/134-sparse-array.ts",
-    "135": "nodemon --exec ts-node code/135-b-tree-max-path-sum.ts"
+    "135": "nodemon --exec ts-node code/135-b-tree-max-path-sum.ts",
+    "136": "nodemon --exec ts-node code/136-largest-rectangle-in-a-matrix.ts"
   },
   "keywords": [],
   "author": "",
