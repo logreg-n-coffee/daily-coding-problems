@@ -141,7 +141,8 @@
     "136": "nodemon --exec ts-node code/136-largest-rectangle-in-a-matrix.ts",
     "137": "nodemon --exec ts-node code/137-bit-array.ts",
     "138": "nodemon --exec ts-node code/138-min-coins-needed-to-make-n-cents.ts",
-    "139": "nodemon --exec ts-node code/139-peekable-interface.ts"
+    "139": "nodemon --exec ts-node code/139-peekable-interface.ts",
+    "140": "nodemon --exec ts-node code/140-two-single-numbers.ts"
   },
   "keywords": [],
   "author": "",
