@@ -41,6 +41,13 @@ class Stack:
             this.top[stackNumber]++;
             this.list[this.stackSize * stackNumber + this.top[stackNumber]] = item;
         }
+
+        peek(stackNumber: number): number | null {
+            if (this.top[stackNumber] === -1) {
+                throw new Error(`Stack ${stackNumber} is empty`);
+            }
+            return this.list[this.stackSize * stackNumber + this.top[stackNumber]];
+        }
     }
 
     const myStack = new Stack(10);
