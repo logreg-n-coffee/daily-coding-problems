@@ -143,7 +143,8 @@
     "138": "nodemon --exec ts-node code/138-min-coins-needed-to-make-n-cents.ts",
     "139": "nodemon --exec ts-node code/139-peekable-interface.ts",
     "140": "nodemon --exec ts-node code/140-two-single-numbers.ts",
-    "141": "nodemon --exec ts-node code/141-three-stacks-using-a-single-list.ts"
+    "141": "nodemon --exec ts-node code/141-three-stacks-using-a-single-list.ts",
+    "142": "nodemon --exec ts-node code/142-valid-parenthesis-string.ts"
   },
   "keywords": [],
   "author": "",
