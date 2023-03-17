@@ -144,7 +144,8 @@
     "139": "nodemon --exec ts-node code/139-peekable-interface.ts",
     "140": "nodemon --exec ts-node code/140-two-single-numbers.ts",
     "141": "nodemon --exec ts-node code/141-three-stacks-using-a-single-list.ts",
-    "142": "nodemon --exec ts-node code/142-valid-parenthesis-string.ts"
+    "142": "nodemon --exec ts-node code/142-valid-parenthesis-string.ts",
+    "143": "nodemon --exec ts-node code/143-pivot-split-list.ts"
   },
   "keywords": [],
   "author": "",
