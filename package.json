@@ -146,7 +146,8 @@
     "141": "nodemon --exec ts-node code/141-three-stacks-using-a-single-list.ts",
     "142": "nodemon --exec ts-node code/142-valid-parenthesis-string.ts",
     "143": "nodemon --exec ts-node code/143-pivot-split-list.ts",
-    "144": "nodemon --exec ts-node code/144-nearest-larger-number.ts"
+    "144": "nodemon --exec ts-node code/144-nearest-larger-number.ts",
+    "145": "nodemon --exec ts-node code/145-swap-every-two-nodes-linked-list.ts"
   },
   "keywords": [],
   "author": "",
