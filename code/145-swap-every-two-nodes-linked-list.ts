@@ -15,13 +15,15 @@ For example, given 1 -> 2 -> 3 -> 4, return 2 -> 1 -> 4 -> 3.
         }
     }
 
-    const swap = (node: List | null) => { 
+    const swap = (node: List | null): List | null => { 
         let curr = node;
 
         while (curr && curr.next) {
             [curr.val, curr.next.val] = [curr.next.val, curr.val];
             curr = curr.next.next;
         }
+
+        return node;
     };
 
     const myList = new List(1);
@@ -30,5 +32,5 @@ For example, given 1 -> 2 -> 3 -> 4, return 2 -> 1 -> 4 -> 3.
     myList.next.next.next = new List(4);
 
     console.log(myList);
-    console.log(swap(myList), myList);
+    console.log(swap(myList));
 })();
