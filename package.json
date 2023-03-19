@@ -147,7 +147,8 @@
     "142": "nodemon --exec ts-node code/142-valid-parenthesis-string.ts",
     "143": "nodemon --exec ts-node code/143-pivot-split-list.ts",
     "144": "nodemon --exec ts-node code/144-nearest-larger-number.ts",
-    "145": "nodemon --exec ts-node code/145-swap-every-two-nodes-linked-list.ts"
+    "145": "nodemon --exec ts-node code/145-swap-every-two-nodes-linked-list.ts",
+    "146": "nodemon --exec ts-node code/146-prune-a-tree.ts"
   },
   "keywords": [],
   "author": "",
