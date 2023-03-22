@@ -149,7 +149,8 @@
     "144": "nodemon --exec ts-node code/144-nearest-larger-number.ts",
     "145": "nodemon --exec ts-node code/145-swap-every-two-nodes-linked-list.ts",
     "146": "nodemon --exec ts-node code/146-prune-a-tree.ts",
-    "147": "nodemon --exec ts-node code/147-sort-a-list-using-reverse.ts"
+    "147": "nodemon --exec ts-node code/147-sort-a-list-using-reverse.ts",
+    "148": "nodemon --exec ts-node code/148-generate-gray-code.ts"
   },
   "keywords": [],
   "author": "",
