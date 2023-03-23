@@ -150,7 +150,8 @@
     "145": "nodemon --exec ts-node code/145-swap-every-two-nodes-linked-list.ts",
     "146": "nodemon --exec ts-node code/146-prune-a-tree.ts",
     "147": "nodemon --exec ts-node code/147-sort-a-list-using-reverse.ts",
-    "148": "nodemon --exec ts-node code/148-generate-gray-code.ts"
+    "148": "nodemon --exec ts-node code/148-generate-gray-code.ts",
+    "149": "nodemon --exec ts-node code/149-implement-sum.js"
   },
   "keywords": [],
   "author": "",
